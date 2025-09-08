@@ -576,19 +576,19 @@
 
         <div class="w-full border-t border-slate-700 pt-10">
           <p class="text-center text-xs font-medium text-slate-500">
-            Dibuat dengan <span class="text-pink-500">❤️</span> oleh
+            Dibuat pada tahun <span id="current-year" class="text-white-500">&copy; 2024</span> oleh
             <a
-              href="https://instagram.com/mwahyusp"
+              href="https://linkedin.com/in/mwahyusp"
               target="_blank"
               class="font-bold text-primary"
               >Mohammad Wahyu Sanusi Putra</a
-            >, menggunakan
+            >. menggunakan
             <a
               href="https://tailwindcss.com"
               target="_blank"
               class="font-bold text-sky-500"
               >Tailwind CSS</a
-            >.
+            >, Semua hak dilindungi.
           </p>
         </div>
       </div>
@@ -603,7 +603,13 @@
       <span class="mt-2 block h-5 w-5 rotate-45 border-l-2 border-t-2"></span>
     </a>
     <!-- Back to top End -->
-
+    <script>
+      // Ambil elemen span
+      const yearSpan = document.getElementById("current-year");
+      
+      // Set tahun saat ini
+      yearSpan.textContent = new Date().getFullYear();
+    </script> 
     <script src="dist/js/script.js"></script>
   </body>
 </html>
