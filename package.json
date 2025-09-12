@@ -7,8 +7,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vite",
     "build": "vite build",
-    "analyze": "vite build --analyze",
-    "dedupe": "npm dedupe",
     "preview": "vite preview"
   },
   "keywords": [],
