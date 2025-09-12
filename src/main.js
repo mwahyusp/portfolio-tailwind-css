@@ -1,9 +1,9 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+import "./style.css";
+import javascriptLogo from "./javascript.svg";
+import viteLogo from "/vite.svg";
+import { setupCounter } from "./counter.js";
 
-document.querySelector('#app').innerHTML = `
+document.querySelector("#app").innerHTML = `
   <div>
     <a href="https://vite.dev" target="_blank">
       <img src="${viteLogo}" class="logo" alt="Vite logo" />
@@ -19,22 +19,4 @@ document.querySelector('#app').innerHTML = `
       Click on the Vite logo to learn more
     </p>
   </div>
-`
-
-setupCounter(document.querySelector('#counter'))
-
-// Smooth scroll for skip link
-│   │       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-│   │         anchor.addEventListener('click', function (e) {
-│   │           e.preventDefault();
-│   │           document.querySelector(this.getAttribute('href')).scrollIntoView({
-│   │             behavior: 'smooth'
-│   │           });
-│   │         });
-│   │       });
-│   │
-│   │       // Form submission alert (placeholder)
-│   │       document.getElementById('contact-form').addEventListener('submit', function (e) {
-│   │         e.preventDefault();
-│   │         alert('Form submitted! (Placeholder for actual submission)');
-│   │       });
+`;
