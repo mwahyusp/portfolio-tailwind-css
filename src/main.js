@@ -22,3 +22,19 @@ document.querySelector('#app').innerHTML = `
 `
 
 setupCounter(document.querySelector('#counter'))
+
+// Smooth scroll for skip link
+│   │       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+│   │         anchor.addEventListener('click', function (e) {
+│   │           e.preventDefault();
+│   │           document.querySelector(this.getAttribute('href')).scrollIntoView({
+│   │             behavior: 'smooth'
+│   │           });
+│   │         });
+│   │       });
+│   │
+│   │       // Form submission alert (placeholder)
+│   │       document.getElementById('contact-form').addEventListener('submit', function (e) {
+│   │         e.preventDefault();
+│   │         alert('Form submitted! (Placeholder for actual submission)');
+│   │       });
