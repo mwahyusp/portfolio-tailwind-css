@@ -1,21 +1,60 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="id" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wahyu - Portfolio & Professional Profile</title>
-    <link href="dist/css/final.css" rel="stylesheet" />
-    <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet" />
+    <title>Mohammad Wahyu Sanusi Putra - Front-End Developer Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio Mohammad Wahyu Sanusi Putra, Front-End Developer dari Jakarta. Spesialis React.js, Tailwind CSS, dan pengembangan web modern. Mari berkolaborasi!" />
+    <meta
+      name="keywords"
+      content="front-end developer, React.js, Tailwind CSS, portfolio, Mohammad Wahyu Sanusi Putra, web developer Jakarta" />
+    <meta name="author" content="Mohammad Wahyu Sanusi Putra" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      property="og:title"
+      content="Mohammad Wahyu Sanusi Putra - Front-End Developer" />
+    <meta
+      property="og:description"
+      content="Portfolio situs web untuk Mohammad Wahyu Sanusi Putra, Front-End Developer." />
+    <meta
+      property="og:image"
+      content="https://res.cloudinary.com/dslkxsifx/image/upload/v1757171957/wahyu_uxpv2d.png" />
+    <meta property="og:url" content="https://yourdomain.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Mohammad Wahyu Sanusi Putra - Front-End Developer" />
+    <meta
+      name="twitter:description"
+      content="Portfolio situs web untuk Mohammad Wahyu Sanusi Putra, Front-End Developer." />
+    <meta
+      name="twitter:image"
+      content="https://res.cloudinary.com/dslkxsifx/image/upload/v1757171957/wahyu_uxpv2d.png" />
+    <link rel="canonical" href="https://yourdomain.com" />
     <link
       rel="icon"
       type="image/png"
+      sizes="32x32"
       href="https://res.cloudinary.com/dslkxsifx/image/upload/v1757171950/mwsp-2-rows-green_m6cij3.png" />
     <link
       rel="icon"
       type="image/webp"
+      sizes="32x32"
       href="https://res.cloudinary.com/dslkxsifx/image/upload/v1757171950/mwsp-2-rows-green_vxgx1d.webp" />
+    <link rel="preconnect" href="https://res.cloudinary.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'" />
+    <link href="dist/css/final.css" rel="stylesheet" />
     <script>
+      // Dark mode script (moved to head for faster execution)
       if (
         localStorage.theme === "dark" ||
         (!("theme" in localStorage) &&
@@ -30,11 +69,15 @@
   <body>
     <!-- Header Start -->
     <header
-      class="absolute left-0 top-0 z-10 flex w-full items-center bg-transparent">
+      class="absolute left-0 top-0 z-10 flex w-full items-center bg-transparent"
+      role="banner">
       <div class="container">
         <div class="relative flex items-center justify-between">
           <div class="px-4">
-            <a href="#home" class="block py-6 text-lg font-bold text-primary">
+            <a
+              href="#home"
+              class="block py-2 text-lg font-bold text-primary"
+              aria-label="Kembali ke Beranda">
               <picture>
                 <source
                   type="image/webp"
@@ -43,8 +86,10 @@
                   " />
                 <img
                   src="https://res.cloudinary.com/dslkxsifx/image/upload/v1757171950/mwsp-1-green_ldqi6l.png"
-                  alt="MWSP Logo"
-                  style="height: 40px" />
+                  alt="Logo MWSP"
+                  width="100"
+                  height="40"
+                  loading="eager" />
               </picture>
             </a>
           </div>
@@ -53,7 +98,9 @@
               id="hamburger"
               name="hamburger"
               type="button"
-              class="absolute right-4 block lg:hidden">
+              class="absolute right-4 block lg:hidden"
+              aria-label="Toggle Menu Navigasi"
+              aria-expanded="false">
               <span
                 class="hamburger-line origin-top-left transition duration-300 ease-in-out"></span>
               <span
@@ -64,12 +111,15 @@
 
             <nav
               id="nav-menu"
-              class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:bg-dark dark:shadow-slate-500 lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none lg:dark:bg-transparent">
+              class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:bg-dark dark:shadow-slate-500 lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none lg:dark:bg-transparent"
+              role="navigation"
+              aria-label="Menu Utama">
               <ul class="block lg:flex">
                 <li class="group">
                   <a
                     href="#home"
                     class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white"
+                    aria-label="Beranda"
                     >Beranda</a
                   >
                 </li>
@@ -77,6 +127,7 @@
                   <a
                     href="#about"
                     class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white"
+                    aria-label="Tentang Saya"
                     >Tentang Saya</a
                   >
                 </li>
@@ -84,6 +135,7 @@
                   <a
                     href="#portfolio"
                     class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white"
+                    aria-label="Portfolio"
                     >Portfolio</a
                   >
                 </li>
@@ -91,6 +143,7 @@
                   <a
                     href="#contact"
                     class="mx-8 flex py-2 text-base text-dark group-hover:text-primary dark:text-white"
+                    aria-label="Kontak Saya"
                     >Kontak Saya</a
                   >
                 </li>
@@ -117,7 +170,7 @@
     <!-- Header End -->
 
     <!-- Hero Section Start -->
-    <section id="home" class="pt-36 dark:bg-dark">
+    <section id="home" class="pt-36 dark:bg-dark" role="main">
       <div class="container">
         <div class="flex flex-wrap">
           <div class="w-full self-center px-4 lg:w-1/2">
@@ -131,8 +184,8 @@
             <h2 class="mb-5 text-lg font-medium text-secondary lg:text-2xl">
               Seorang
               <span class="text-dark dark:text-white"
-                >front-end developer :
-              </span>
+                >front-end developer :</span
+              >
               Belajar dari <i>Console.log</i>, Berkarya untuk Dunia Digital. 😁.
             </h2>
             <p class="mb-10 font-medium leading-relaxed text-secondary">
@@ -148,12 +201,16 @@
             <a
               href="https://linkedin.com/in/mwahyusp"
               class="mr-3 rounded-full bg-blue-500 bg-primary px-8 py-3 text-base font-semibold text-white transition duration-300 ease-in-out hover:bg-blue-700 hover:opacity-80 hover:shadow-lg"
+              rel="noopener noreferrer"
+              aria-label="Hubungi saya di LinkedIn"
               >Rekrut Saya</a
             >
 
             <a
               href="https://github.com/mwahyusp"
               class="rounded-full bg-blue-500 bg-primary px-8 py-3 text-base font-semibold text-white transition duration-300 ease-in-out hover:bg-blue-700 hover:opacity-80 hover:shadow-lg"
+              rel="noopener noreferrer"
+              aria-label="Lihat profil GitHub saya"
               >Lihat Github Saya</a
             >
           </div>
@@ -167,17 +224,22 @@
                   " />
                 <img
                   src="https://res.cloudinary.com/dslkxsifx/image/upload/v1757171957/wahyu_uxpv2d.png"
-                  alt="Mohammad Wahyu Sanusi Putra"
+                  alt="Foto profil Mohammad Wahyu Sanusi Putra, Front-End Developer"
+                  width="400"
+                  height="400"
                   class="relative z-10 mx-auto max-w-full rounded-full"
                   loading="eager" />
               </picture>
               <span
-                class="absolute bottom-0 left-1/2 -translate-x-1/2 md:scale-125">
+                class="absolute bottom-0 left-1/2 -translate-x-1/2 md:scale-125"
+                aria-hidden="true">
                 <svg
                   width="400"
                   height="400"
                   viewBox="0 0 200 200"
-                  xmlns="http://www.w3.org/2000/svg">
+                  xmlns="http://www.w3.org/2000/svg"
+                  role="img"
+                  aria-hidden="true">
                   <path
                     fill="#14b8a6"
                     d="M47.4,-51C59.2,-35.6,65.1,-17.8,63.4,-1.7C61.7,14.5,52.6,28.9,40.8,36.6C28.9,44.2,14.5,45,-2,47C-18.4,49,-36.8,52.1,-45.4,44.5C-53.9,36.8,-52.5,18.4,-51.2,1.3C-49.9,-15.8,-48.7,-31.7,-40.2,-47.1C-31.7,-62.4,-15.8,-77.3,1,-78.3C17.8,-79.2,35.6,-66.3,47.4,-51Z"
@@ -196,13 +258,13 @@
       <div class="container">
         <div class="flex flex-wrap">
           <div class="mb-10 w-full px-4 lg:w-1/2">
-            <h4 class="mb-3 text-lg font-bold uppercase text-primary">
+            <h2 class="mb-3 text-lg font-bold uppercase text-primary">
               Tentang Saya
-            </h4>
-            <h2
+            </h2>
+            <h3
               class="mb-5 max-w-md text-3xl font-bold text-dark dark:text-white lg:text-4xl">
               Hai, Internet!
-            </h2>
+            </h3>
             <p class="max-w-xl text-base font-medium text-secondary lg:text-lg">
               <span class="font-bold text-dark dark:text-white">Saya Wahyu</span
               >, Front-End Developer dari Jakarta yang percaya bahwa teknologi
@@ -226,18 +288,21 @@
               teknologi? Saya terbuka untuk kolaborasi, diskusi, atau sekadar
               jadi teman diskusi. Mari saling belajar dan tumbuh bersama!
             </p>
-            <div class="flex items-center">
+            <div class="flex items-center" role="list">
               <!-- Instagram -->
               <a
                 href="https://instagram.com/mwahyusp"
                 target="_blank"
-                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                rel="noopener noreferrer"
+                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+                aria-label="Ikuti saya di Instagram">
                 <svg
                   role="img"
                   width="20"
                   class="fill-current"
                   viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg">
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true">
                   <title>Instagram</title>
                   <path
                     d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z" />
@@ -248,13 +313,16 @@
               <a
                 href="https://twitter.com/mwhysp"
                 target="_blank"
-                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                rel="noopener noreferrer"
+                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+                aria-label="Ikuti saya di Twitter">
                 <svg
                   role="img"
                   width="20"
                   class="fill-current"
                   viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg">
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true">
                   <title>Twitter</title>
                   <path
                     d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
@@ -265,16 +333,19 @@
               <a
                 href="https://github.com/mwahyusp"
                 target="_blank"
-                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                rel="noopener noreferrer"
+                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+                aria-label="Lihat profil GitHub saya">
                 <svg
                   role="img"
                   width="20"
                   class="fill-current"
                   viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg">
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true">
                   <title>Github</title>
                   <path
-                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
                 </svg>
               </a>
 
@@ -282,13 +353,16 @@
               <a
                 href="https://linkedin.com/in/mwahyusp"
                 target="_blank"
-                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                rel="noopener noreferrer"
+                class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"
+                aria-label="Hubungi saya di LinkedIn">
                 <svg
                   role="img"
                   width="20"
                   class="fill-current"
                   viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg">
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true">
                   <title>LinkedIn</title>
                   <path
                     d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
@@ -306,18 +380,22 @@
       <div class="container">
         <div class="w-full px-4">
           <div class="mx-auto mb-16 max-w-xl text-center">
-            <h4 class="mb-2 text-lg font-semibold text-primary">Portfolio</h4>
-            <h2
+            <h2 class="mb-2 text-lg font-semibold text-primary">Portfolio</h2>
+            <h3
               class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">
               Proyek Terbaru
-            </h2>
-            <p class="text-md font-medium text-secondary md:text-lg"></p>
+            </h3>
+            <p
+              class="text-md font-medium text-secondary md:text-lg"
+              aria-label="Deskripsi portofolio">
+              Koleksi proyek terbaru saya dalam pengembangan front-end.
+            </p>
           </div>
         </div>
 
         <div
           class="flex w-full flex-wrap justify-center px-4 xl:mx-auto xl:w-10/12">
-          <div class="mb-12 p-4 md:w-1/2">
+          <article class="mb-12 p-4 md:w-1/2">
             <div class="overflow-hidden rounded-md shadow-md">
               <picture>
                 <source
@@ -327,15 +405,16 @@
                   " />
                 <img
                   src="https://res.cloudinary.com/dslkxsifx/image/upload/v1757317740/paws-grooming_diuoe1.png"
-                  alt="Paws Grooming"
-                  width="w-full"
+                  alt="Screenshot landing page Paws Grooming, layanan grooming hewan peliharaan rumahan"
+                  width="600"
+                  height="400"
                   loading="lazy" />
               </picture>
             </div>
-            <h3
+            <h4
               class="mb-3 mt-5 text-xl font-semibold text-dark dark:text-white">
               Proyek Grooming Rumahan
-            </h3>
+            </h4>
             <p class="text-base font-medium text-secondary">
               Landing page modern untuk usaha pet grooming panggilan ke rumah,
               dibangun dengan React.js, Tailwind CSS, dan Vite. |
@@ -343,12 +422,13 @@
                 href="https://paws-groooming.vercel.app/"
                 class="text-base font-medium text-dark dark:text-white"
                 target="_blank"
-                rel="noopener noreferrer">
+                rel="noopener noreferrer"
+                aria-label="Lihat demo live Paws Grooming">
                 <strong>▶️ Lihat Live Demo</strong>
               </a>
             </p>
-          </div>
-          <div class="mb-12 p-4 md:w-1/2">
+          </article>
+          <article class="mb-12 p-4 md:w-1/2">
             <div class="overflow-hidden rounded-md shadow-md">
               <picture>
                 <source
@@ -358,15 +438,16 @@
                   " />
                 <img
                   src="https://res.cloudinary.com/dslkxsifx/image/upload/v1757318147/contact-apps_hzkzc9.png"
-                  alt="Contact Apps"
-                  width="w-full"
+                  alt="Screenshot aplikasi daftar kontak sederhana"
+                  width="600"
+                  height="400"
                   loading="lazy" />
               </picture>
             </div>
-            <h3
+            <h4
               class="mb-3 mt-5 text-xl font-semibold text-dark dark:text-white">
               Daftar Kontak (Contact List Apps)
-            </h3>
+            </h4>
             <p class="text-base font-medium text-secondary">
               “Contact List Application” dibuat dengan React.js. Aplikasi
               sederhana untuk menyimpan, menampilkan, serta mengelola daftar
@@ -375,12 +456,13 @@
                 href="https://contacts-app-nine.vercel.app/"
                 class="text-base font-medium text-dark dark:text-white"
                 target="_blank"
-                rel="noopener noreferrer">
+                rel="noopener noreferrer"
+                aria-label="Lihat demo live Contact List Apps">
                 <strong>▶️ Lihat Live Demo</strong>
               </a>
             </p>
-          </div>
-          <div class="mb-12 p-4 md:w-1/2">
+          </article>
+          <article class="mb-12 p-4 md:w-1/2">
             <div class="overflow-hidden rounded-md shadow-md">
               <picture>
                 <source
@@ -390,15 +472,16 @@
                   " />
                 <img
                   src="https://res.cloudinary.com/dslkxsifx/image/upload/v1757929352/counter-next_krqsw5.png"
-                  alt="Counter"
-                  width="w-full"
+                  alt="Screenshot aplikasi counter sederhana dengan Next.js"
+                  width="600"
+                  height="400"
                   loading="lazy" />
               </picture>
             </div>
-            <h3
+            <h4
               class="mb-3 mt-5 text-xl font-semibold text-dark dark:text-white">
               Counter Sederhana
-            </h3>
+            </h4>
             <p class="text-base font-medium text-secondary">
               Aplikasi Counter sederhana yang dibuat menggunakan Next.js dan
               Tailwind CSS. Pengguna dapat menambah atau mengurangi angka
@@ -407,12 +490,13 @@
                 href="https://counterr-nextjs.netlify.app/"
                 class="text-base font-medium text-dark dark:text-white"
                 target="_blank"
-                rel="noopener noreferrer">
+                rel="noopener noreferrer"
+                aria-label="Lihat demo live Counter Sederhana">
                 <strong>▶️ Lihat Live Demo</strong>
               </a>
             </p>
-          </div>
-          <div class="mb-12 p-4 md:w-1/2">
+          </article>
+          <article class="mb-12 p-4 md:w-1/2">
             <div class="overflow-hidden rounded-md shadow-md">
               <picture>
                 <source
@@ -422,15 +506,16 @@
                   " />
                 <img
                   src="https://res.cloudinary.com/dslkxsifx/image/upload/v1757929350/contact-form-next_hsakcs.png"
-                  alt="Kontak Formulir"
-                  width="w-full"
+                  alt="Screenshot formulir kontak sederhana dengan Next.js"
+                  width="600"
+                  height="400"
                   loading="lazy" />
               </picture>
             </div>
-            <h3
+            <h4
               class="mb-3 mt-5 text-xl font-semibold text-dark dark:text-white">
               Formulir Kontak
-            </h3>
+            </h4>
             <p class="text-base font-medium text-secondary">
               Aplikasi Formulir Kontak Sederhana yang dibuat menggunakan Next.js
               dan Tailwind CSS. Pengguna dapat mengisi nama dan pesan, lalu
@@ -439,12 +524,13 @@
                 href="https://contact-form-nextjs.netlify.app/"
                 class="text-base font-medium text-dark dark:text-white"
                 target="_blank"
-                rel="noopener noreferrer">
+                rel="noopener noreferrer"
+                aria-label="Lihat demo live Formulir Kontak">
                 <strong>▶️ Lihat Live Demo</strong>
               </a>
             </p>
-          </div>
-          <div class="mb-12 p-4 md:w-1/2">
+          </article>
+          <article class="mb-12 p-4 md:w-1/2">
             <div class="overflow-hidden rounded-md shadow-md">
               <picture>
                 <source
@@ -454,15 +540,16 @@
                   " />
                 <img
                   src="https://res.cloudinary.com/dslkxsifx/image/upload/v1757171924/my-privy-noter_lvtyif.png"
-                  alt="My Privy Noter"
-                  width="w-full"
+                  alt="Screenshot aplikasi catatan pribadi My Privy Noter"
+                  width="600"
+                  height="400"
                   loading="lazy" />
               </picture>
             </div>
-            <h3
+            <h4
               class="mb-3 mt-5 text-xl font-semibold text-dark dark:text-white">
               Pencatat Privy (Privy Noter)
-            </h3>
+            </h4>
             <p class="text-base font-medium text-secondary">
               Aplikasi catatan pribadi yang memungkinkan pengguna untuk membuat,
               mengelola, dan menyimpan catatan mereka secara aman dan mudah
@@ -471,12 +558,13 @@
                 href="https://my-privy-noter.netlify.app/"
                 class="text-base font-medium text-dark dark:text-white"
                 target="_blank"
-                rel="noopener noreferrer">
+                rel="noopener noreferrer"
+                aria-label="Lihat demo live My Privy Noter">
                 <strong>▶️ Lihat Live Demo</strong>
               </a>
             </p>
-          </div>
-          <div class="mb-12 p-4 md:w-1/2">
+          </article>
+          <article class="mb-12 p-4 md:w-1/2">
             <div class="overflow-hidden rounded-md shadow-md">
               <picture>
                 <source
@@ -486,15 +574,16 @@
                   " />
                 <img
                   src="https://res.cloudinary.com/dslkxsifx/image/upload/v1757318147/simple-blog_rdhkkj.png"
-                  alt="Simple Blog"
-                  width="w-full"
+                  alt="Screenshot aplikasi blog sederhana"
+                  width="600"
+                  height="400"
                   loading="lazy" />
               </picture>
             </div>
-            <h3
+            <h4
               class="mb-3 mt-5 text-xl font-semibold text-dark dark:text-white">
               Blog Sederhana (Simple Blog)
-            </h3>
+            </h4>
             <p class="text-base font-medium text-secondary">
               Aplikasi blog sederhana untuk latihan CRUD penuh (Create, Read,
               Update, Delete) tanpa framework backend, (React + Vite +
@@ -503,12 +592,13 @@
                 href="https://simplee-blog.netlify.app/"
                 class="text-base font-medium text-dark dark:text-white"
                 target="_blank"
-                rel="noopener noreferrer">
+                rel="noopener noreferrer"
+                aria-label="Lihat demo live Simple Blog">
                 <strong>▶️ Lihat Live Demo</strong>
               </a>
             </p>
-          </div>
-          <div class="mb-12 p-4 md:w-1/2">
+          </article>
+          <article class="mb-12 p-4 md:w-1/2">
             <div class="overflow-hidden rounded-md shadow-md">
               <picture>
                 <source
@@ -518,15 +608,16 @@
                   " />
                 <img
                   src="https://res.cloudinary.com/dslkxsifx/image/upload/v1758187300/todo-apps-react-context-api_amqtff.png"
-                  alt="To-Do List"
-                  width="w-full"
+                  alt="Screenshot aplikasi daftar todo modern dengan React Context API"
+                  width="600"
+                  height="400"
                   loading="lazy" />
               </picture>
             </div>
-            <h3
+            <h4
               class="mb-3 mt-5 text-xl font-semibold text-dark dark:text-white">
               Daftar Todo Modern
-            </h3>
+            </h4>
             <p class="text-base font-medium text-secondary">
               Aplikasi Daftar Todo modern yang dibuat dengan React dan Context
               API, dilengkapi dengan mode terang/gelap, antarmuka pengguna
@@ -535,12 +626,13 @@
                 href="https://todo-apps-react-context-api.netlify.app/"
                 class="text-base font-medium text-dark dark:text-white"
                 target="_blank"
-                rel="noopener noreferrer">
+                rel="noopener noreferrer"
+                aria-label="Lihat demo live Daftar Todo Modern">
                 <strong>▶️ Lihat Live Demo</strong>
               </a>
             </p>
-          </div>
-          <div class="mb-12 p-4 md:w-1/2">
+          </article>
+          <article class="mb-12 p-4 md:w-1/2">
             <div class="overflow-hidden rounded-md shadow-md">
               <picture>
                 <source
@@ -550,28 +642,30 @@
                   " />
                 <img
                   src="https://res.cloudinary.com/dslkxsifx/image/upload/v1757929351/gallery-statis-next_lxccmj.png"
-                  alt="Galeri Statis"
-                  width="w-full"
+                  alt="Screenshot galeri gambar statis dengan Next.js"
+                  width="600"
+                  height="400"
                   loading="lazy" />
               </picture>
             </div>
-            <h3
+            <h4
               class="mb-3 mt-5 text-xl font-semibold text-dark dark:text-white">
               Galeri Gambar Statis
-            </h3>
+            </h4>
             <p class="text-base font-medium text-secondary">
               Aplikasi Galeri Gambar Statis yang dibuat menggunakan Next.js dan
-              Tailwind CSS. Gambar ditampilkan dalam layout grid yang
-              responsif.|
+              Tailwind CSS. Gambar ditampilkan dalam layout grid yang responsif.
+              |
               <a
                 href="https://galleryy-statis-nextjs.vercel.app/"
                 class="text-base font-medium text-dark dark:text-white"
                 target="_blank"
-                rel="noopener noreferrer">
+                rel="noopener noreferrer"
+                aria-label="Lihat demo live Galeri Gambar Statis">
                 <strong>▶️ Lihat Live Demo</strong>
               </a>
             </p>
-          </div>
+          </article>
         </div>
       </div>
     </section>
@@ -582,61 +676,65 @@
       <div class="container">
         <div class="w-full px-4">
           <div class="mx-auto mb-16 max-w-xl text-center">
-            <h4 class="mb-2 text-lg font-semibold text-primary">Kontak</h4>
-            <h2
+            <h2 class="mb-2 text-lg font-semibold text-primary">Kontak</h2>
+            <h3
               class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl lg:text-5xl">
               Hubungi Saya
-            </h2>
+            </h3>
             <p class="text-md font-medium text-secondary md:text-lg">
-              <span
-                data-en="Let's build something amazing together! Or just chat. Feel free to contact me through the form below or via email."
-                data-id="Mari membangun sesuatu yang luar biasa bersama! Atau sekadar ngobrol. Jangan ragu untuk menghubungi saya melalui formulir di bawah ini atau melalui email.">
-                Mari membangun sesuatu yang luar biasa bersama! Atau sekadar
-                ngobrol. Jangan ragu untuk menghubungi saya melalui formulir di
-                bawah ini atau melalui email.
-              </span>
+              Mari membangun sesuatu yang luar biasa bersama! Atau sekadar
+              ngobrol. Jangan ragu untuk menghubungi saya melalui formulir di
+              bawah ini atau melalui email.
             </p>
           </div>
         </div>
 
-        <form
-          action="mailto:remoteworkwithwahyu@gmail.com"
-          method="POST"
-          enctype="text/plain">
-          <div class="w-full lg:mx-auto lg:w-2/3">
-            <div class="mb-8 w-full px-4">
-              <label for="name" class="text-base font-bold text-primary"
-                >Nama Lengkap</label
-              >
-              <input
-                type="text"
-                id="name"
-                class="w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
-            </div>
-            <div class="mb-8 w-full px-4">
-              <label for="email" class="text-base font-bold text-primary"
-                >Email</label
-              >
-              <input
-                type="email"
-                id="email"
-                class="w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
-            </div>
-            <div class="mb-8 w-full px-4">
-              <label for="message" class="text-base font-bold text-primary"
-                >Pesan</label
-              >
-              <textarea
-                type="email"
-                id="email"
-                class="h-32 w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"></textarea>
-            </div>
-            <div class="w-full px-4">
-              <button
-                class="w-full rounded-full bg-primary px-8 py-3 text-base font-semibold text-white transition duration-500 hover:opacity-80 hover:shadow-lg">
-                Kirim Pesan
-              </button>
-            </div>
+        <form id="contact-form" class="w-full lg:mx-auto lg:w-2/3" novalidate>
+          <div class="mb-8 w-full px-4">
+            <label for="name" class="text-base font-bold text-primary"
+              >Nama Lengkap</label
+            >
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              class="w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+              aria-describedby="name-error" />
+            <span id="name-error" class="sr-only" role="alert"></span>
+          </div>
+          <div class="mb-8 w-full px-4">
+            <label for="email" class="text-base font-bold text-primary"
+              >Email</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+              aria-describedby="email-error" />
+            <span id="email-error" class="sr-only" role="alert"></span>
+          </div>
+          <div class="mb-8 w-full px-4">
+            <label for="message" class="text-base font-bold text-primary"
+              >Pesan</label
+            >
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              required
+              class="h-32 w-full rounded-md bg-slate-200 p-3 text-dark focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+              aria-describedby="message-error"></textarea>
+            <span id="message-error" class="sr-only" role="alert"></span>
+          </div>
+          <div class="w-full px-4">
+            <button
+              type="submit"
+              class="w-full rounded-full bg-primary px-8 py-3 text-base font-semibold text-white transition duration-500 hover:opacity-80 hover:shadow-lg">
+              Kirim Pesan
+            </button>
           </div>
         </form>
       </div>
@@ -644,7 +742,7 @@
     <!-- Contact Section End -->
 
     <!-- Footer Start -->
-    <footer class="bg-dark pb-12 pt-24">
+    <footer class="bg-dark pb-12 pt-24" role="contentinfo">
       <div class="container">
         <div class="flex flex-wrap">
           <div class="mb-12 w-full px-4 font-medium text-slate-300 md:w-1/3">
@@ -658,88 +756,97 @@
                     " />
                   <img
                     src="https://res.cloudinary.com/dslkxsifx/image/upload/v1757171950/mwsp-1-green_ldqi6l.png"
-                    alt="MWSP Logo"
-                    style="height: 50px"
-                    class="mt-8 shadow-lg"
+                    alt="Logo MWSP"
+                    width="150"
+                    height="50"
                     loading="eager" />
                 </picture>
               </a>
             </h2>
             <h3 class="mb-2 text-2xl font-bold">Hubungi Saya</h3>
-            <p>remoteworkwithwahyu@gmail.com</p>
-            <p>Jl. Rawa Jati Timur 1 No. 38</p>
-            <p>Jakarta Selatan</p>
+            <address class="not-italic">
+              <p>remoteworkwithwahyu@gmail.com</p>
+              <p>Jl. Rawa Jati Timur 1 No. 38</p>
+              <p>Jakarta Selatan</p>
+            </address>
           </div>
-          <div class="mb-12 w-full px-4 md:w-1/3">
+          <div class="mb-12 w-full px-4 py-6 md:w-1/3">
             <h3 class="mb-5 text-xl font-semibold text-white">Tautan</h3>
-            <ul class="text-slate-300">
-              <li>
-                <a
-                  href="#home"
-                  class="mb-3 inline-block text-base hover:text-primary"
-                  >Beranda</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#about"
-                  class="mb-3 inline-block text-base hover:text-primary"
-                  >Tentang Saya</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#portfolio"
-                  class="mb-3 inline-block text-base hover:text-primary"
-                  >Portfolio</a
-                >
-              </li>
-
-              <li>
-                <a
-                  href="#contact"
-                  class="mb-3 inline-block text-base hover:text-primary"
-                  >Kontak Saya
-                </a>
-              </li>
-            </ul>
+            <nav role="navigation" aria-label="Tautan navigasi utama">
+              <ul class="text-slate-300">
+                <li>
+                  <a
+                    href="#home"
+                    class="mb-3 inline-block text-base hover:text-primary"
+                    >Beranda</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#about"
+                    class="mb-3 inline-block text-base hover:text-primary"
+                    >Tentang Saya</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#portfolio"
+                    class="mb-3 inline-block text-base hover:text-primary"
+                    >Portfolio</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#contact"
+                    class="mb-3 inline-block text-base hover:text-primary"
+                    >Kontak Saya</a
+                  >
+                </li>
+              </ul>
+            </nav>
           </div>
-          <div class="mb-12 w-full px-4 md:w-1/3">
+          <div class="mb-12 w-full px-4 py-6 md:w-1/3">
             <h3 class="mb-5 text-xl font-semibold text-white">Media Sosial</h3>
-            <ul class="text-slate-300">
-              <li>
-                <a
-                  href="https://instagram.com/mwahyusp"
-                  target="_blank"
-                  class="mb-3 inline-block text-base hover:text-primary"
-                  >Instagram</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://twitter.com/mwhysp"
-                  target="_blank"
-                  class="mb-3 inline-block text-base hover:text-primary"
-                  >Twitter</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://github.com/mwahyusp"
-                  target="_blank"
-                  class="mb-3 inline-block text-base hover:text-primary"
-                  >Github</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://linkedin.com/in/mwahyusp"
-                  target="_blank"
-                  class="mb-3 inline-block text-base hover:text-primary"
-                  >LinkedIn</a
-                >
-              </li>
-            </ul>
+            <nav role="navigation" aria-label="Tautan media sosial">
+              <ul class="text-slate-300">
+                <li>
+                  <a
+                    href="https://instagram.com/mwahyusp"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="mb-3 inline-block text-base hover:text-primary"
+                    >Instagram</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://twitter.com/mwhysp"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="mb-3 inline-block text-base hover:text-primary"
+                    >Twitter</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/mwahyusp"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="mb-3 inline-block text-base hover:text-primary"
+                    >Github</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://linkedin.com/in/mwahyusp"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="mb-3 inline-block text-base hover:text-primary"
+                    >LinkedIn</a
+                  >
+                </li>
+              </ul>
+            </nav>
           </div>
         </div>
 
@@ -750,15 +857,17 @@
             <a
               href="https://linkedin.com/in/mwahyusp"
               target="_blank"
+              rel="noopener noreferrer"
               class="font-bold text-primary"
               >Mohammad Wahyu Sanusi Putra</a
             >. menggunakan
             <a
               href="https://tailwindcss.com"
               target="_blank"
+              rel="noopener noreferrer"
               class="font-bold text-sky-500"
               >Tailwind CSS</a
-            >, Semua hak dilindungi.
+            >. Semua hak dilindungi.
           </p>
         </div>
       </div>
@@ -769,8 +878,11 @@
     <a
       href="#home"
       class="fixed bottom-4 right-4 z-[9999] hidden h-14 w-14 items-center justify-center rounded-full bg-primary p-4 hover:animate-pulse"
-      id="to-top">
-      <span class="mt-2 block h-5 w-5 rotate-45 border-l-2 border-t-2"></span>
+      id="to-top"
+      aria-label="Kembali ke atas">
+      <span
+        class="mt-2 block h-5 w-5 rotate-45 border-l-2 border-t-2"
+        aria-hidden="true"></span>
     </a>
     <!-- Back to top End -->
     <script>
